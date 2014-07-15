@@ -5,6 +5,6 @@ package dk.unfsdc.Lazy_Chemist;
  */
 public class AtomLibrary {
 
-    public static final String[] HYDROGEN = { "Hydrogen", "H", ""}
+    public static final String[] HYDROGEN = { "Hydrogen", "H", ""};
 
 }
