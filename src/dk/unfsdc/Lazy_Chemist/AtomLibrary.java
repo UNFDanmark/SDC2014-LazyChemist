@@ -5,7 +5,16 @@ package dk.unfsdc.Lazy_Chemist;
  */
 public class AtomLibrary {
 
-    public static final String[] Categories = { "Diatomic Nonmetals", "Noble Gases", "Alkali Metals", "Alkaline Earth Metals", "Metalloids", "Polyatomic Nonmetals", "Other Metals", "Transition Metals" };
+    public static final String[] Categories = {
+            "Diatomic Nonmetals",
+            "Noble Gases",
+            "Alkali Metals",
+            "Alkaline Earth Metals",
+            "Metalloids",
+            "Polyatomic Nonmetals",
+            "Other Metals",
+            "Transition Metals"
+    };
 
     public static final String[] HYDROGEN = { "Hydrogen", "H", "1.008", "2.20", Categories[0] };
     public static final String[] HELIUM = { "Helium", "He", "4.002602", "", Categories[1] };
@@ -40,42 +49,40 @@ public class AtomLibrary {
     public static final String[] GALLIUM = { "Gallium", "Ga", "69.723", "1.81", Categories[6] };
     public static final String[] GERMANIUM = { "Germanium", "Ge", "72.63", "2.01", Categories[4] };
     public static final String[] ARSENIC = { "Arsenic", "As", "74.921595", "2.18", Categories[4] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
-    public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
 
-    public static final String[][] ATOMS = { HYDROGEN, HELIUM
-
-    public class
-
+    public static final String[][] ATOMS = {
+            HYDROGEN,
+            HELIUM,
+            LITHIUM,
+            BERYLLIUM,
+            BORON,
+            CARBON,
+            NITROGEN,
+            OXYGEN,
+            FLUORINE,
+            NEON,
+            SODIUM,
+            MAGNESIUM,
+            ALUMINIUM,
+            SILICON,
+            PHOSPHORUS,
+            SULFUR,
+            CHLORINE,
+            ARGON,
+            POTASSIUM,
+            CALCIUM,
+            SCANDIUM,
+            TITANIUM,
+            VANADIUM,
+            CHROMIUM,
+            MANGANESE,
+            IRON,
+            COBALT,
+            NICKEL,
+            COPPER,
+            ZINC,
+            GALLIUM,
+            GERMANIUM,
+            ARSENIC
+    };
 }
