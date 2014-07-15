@@ -53,8 +53,14 @@ public class AtomLibrary {
     public static final String[] BROMINE = { "Bromine", "Br", "79.904", "2.96", CATEGORIES[0] };
     public static final String[] KRYPTON = { "Krypton", "Kr", "83.798", "3.00", CATEGORIES[1] };
     public static final String[] RUBIDIUM = { "Rubidium", "Rb", "85.4678", "0.82", CATEGORIES[2] };
-    // public static final String[] = { "", "", "", "", CATEGORIES[] };
-
+    public static final String[] STRONTIUM = { "Strontium", "Sr", "87.62", "0.95", CATEGORIES[3] };
+    public static final String[] YTTRIUM = { "Yttrium", "Y", "88.90584", "1.22", CATEGORIES[7] };
+    public static final String[] ZIRCONIUM = { "Zirconium", "Zr", "91.224", "1.33", CATEGORIES[7] };
+    public static final String[] NIOBIUM = { "Niobium", "Nb", "92.90637", "1.6", CATEGORIES[7] };
+    public static final String[] MOLYBDENUM = { "Molybdenum", "Mo", "95.95", "2.16", CATEGORIES[7] };    // public static final String[] = { "", "", "", "", CATEGORIES[] };
+    public static final String[] TECHNETIUM = { "Technetium", "Tc", "98", "1.9", CATEGORIES[7] };
+    public static final String[] RUTHENIUM = { "Ruthenium", "Ru", "101.07", "2.2", CATEGORIES[7] };
+    public static final String[] RHODIUM = { "Rhodium", "Rh", "102.90550", "2.28", CATEGORIES[7] };
     public static final String[][] ATOMS = {
             HYDROGEN,
             HELIUM,
