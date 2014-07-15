@@ -16,20 +16,5 @@ public class ChemistMain extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        final Spinner dropdown = (Spinner) findViewById(R.id.dropdown);
-        final String[] dropdownItems = { "Atom Liberary" };
-        dropdown.setAdapter(new ArrayAdapter(this, android.R.layout.simple_spinner_item, dropdownItems));
-        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 }

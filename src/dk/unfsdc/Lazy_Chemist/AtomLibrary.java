@@ -1,8 +1,5 @@
 package dk.unfsdc.Lazy_Chemist;
 
-/**
- * Created by sdc on 7/15/14.
- */
 public class AtomLibrary {
 
     public static final String[] CATEGORIES = {
@@ -61,6 +58,7 @@ public class AtomLibrary {
     public static final String[] TECHNETIUM = { "Technetium", "Tc", "98", "1.9", CATEGORIES[7] };
     public static final String[] RUTHENIUM = { "Ruthenium", "Ru", "101.07", "2.2", CATEGORIES[7] };
     public static final String[] RHODIUM = { "Rhodium", "Rh", "102.90550", "2.28", CATEGORIES[7] };
+
     public static final String[][] ATOMS = {
             HYDROGEN,
             HELIUM,
