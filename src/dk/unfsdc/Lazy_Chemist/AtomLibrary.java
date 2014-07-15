@@ -16,6 +16,7 @@ public class AtomLibrary {
             "Transition Metals"
     };
 
+
     public static final String[] HYDROGEN = { "Hydrogen", "H", "1.008", "2.20", Categories[0] };
     public static final String[] HELIUM = { "Helium", "He", "4.002602", "", Categories[1] };
     public static final String[] LITHIUM = { "Lithium", "Li", "6.94", "0.98", Categories[2] };
