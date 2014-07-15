@@ -31,7 +31,5 @@ public class ChemistMain extends Activity {
             }
         });
 
-        final
-
     }
 }
