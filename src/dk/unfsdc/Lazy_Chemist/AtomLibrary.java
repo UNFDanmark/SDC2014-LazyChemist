@@ -6,14 +6,14 @@ package dk.unfsdc.Lazy_Chemist;
 public class AtomLibrary {
 
     public static final String[] Categories = {
-            "Diatomic Nonmetals",
-            "Noble Gases",
-            "Alkali Metals",
-            "Alkaline Earth Metals",
-            "Metalloids",
-            "Polyatomic Nonmetals",
-            "Other Metals",
-            "Transition Metals"
+            "Diatomic Nonmetals",       // 0
+            "Noble Gases",              // 1
+            "Alkali Metals",            // 2
+            "Alkaline Earth Metals",    // 3
+            "Metalloids",               // 4
+            "Polyatomic Nonmetals",     // 5
+            "Other Metals",             // 6
+            "Transition Metals"         // 7
     };
 
 
@@ -50,6 +50,8 @@ public class AtomLibrary {
     public static final String[] GALLIUM = { "Gallium", "Ga", "69.723", "1.81", Categories[6] };
     public static final String[] GERMANIUM = { "Germanium", "Ge", "72.63", "2.01", Categories[4] };
     public static final String[] ARSENIC = { "Arsenic", "As", "74.921595", "2.18", Categories[4] };
+    public static final String[] SELENIUM = { "Selenium", "Se", "78.971", "2.55", Categories[5] };
+    public static final String[] BROMINE = { "Bromine", "Br", "79.904", "2.96", Categories[0] };
     public static final String[] = { "", "", "", "", Categories[] };
     public static final String[] = { "", "", "", "", Categories[] };
     public static final String[] = { "", "", "", "", Categories[] };
@@ -58,9 +60,6 @@ public class AtomLibrary {
     public static final String[] = { "", "", "", "", Categories[] };
     public static final String[] = { "", "", "", "", Categories[] };
     public static final String[] = { "", "", "", "", Categories[] };
-    public static final String[] = { "", "", "", "", Categories[] };
-    public static final String[] = { "", "", "", "", Categories[] };
-
 
     public static final String[][] ATOMS = {
             HYDROGEN,
@@ -95,6 +94,8 @@ public class AtomLibrary {
             ZINC,
             GALLIUM,
             GERMANIUM,
-            ARSENIC
+            ARSENIC,
+            SELENIUM,
+            BROMINE
     };
 }
