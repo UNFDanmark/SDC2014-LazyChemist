@@ -10,7 +10,8 @@ public class AtomLibrary {
             "Metalloids",               // 4
             "Polyatomic Nonmetals",     // 5
             "Other Metals",             // 6
-            "Transition Metals"         // 7
+            "Transition Metals",        // 7
+            "Lanthanides",              // 8
     };
 
     public static final String[] HYDROGEN = { "Hydrogen", "H", "1.008", "2.20", CATEGORIES[0] };
@@ -54,10 +55,41 @@ public class AtomLibrary {
     public static final String[] YTTRIUM = { "Yttrium", "Y", "88.90584", "1.22", CATEGORIES[7] };
     public static final String[] ZIRCONIUM = { "Zirconium", "Zr", "91.224", "1.33", CATEGORIES[7] };
     public static final String[] NIOBIUM = { "Niobium", "Nb", "92.90637", "1.6", CATEGORIES[7] };
-    public static final String[] MOLYBDENUM = { "Molybdenum", "Mo", "95.95", "2.16", CATEGORIES[7] };    // public static final String[] = { "", "", "", "", CATEGORIES[] };
+    public static final String[] MOLYBDENUM = { "Molybdenum", "Mo", "95.95", "2.16", CATEGORIES[7] };
     public static final String[] TECHNETIUM = { "Technetium", "Tc", "98", "1.9", CATEGORIES[7] };
     public static final String[] RUTHENIUM = { "Ruthenium", "Ru", "101.07", "2.2", CATEGORIES[7] };
     public static final String[] RHODIUM = { "Rhodium", "Rh", "102.90550", "2.28", CATEGORIES[7] };
+    public static final String[] PALLADIUM= { "Palladium", "Pd", "106.42", "2.20", CATEGORIES[7] };
+    public static final String[] SILVER = { "Silver", "Ag", "107.8682", "1.93", CATEGORIES[7] };
+    public static final String[] CADMIUM = { "Cadmium", "Cd", "112.414", "1.69", CATEGORIES[7] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] TIN = { "Tin", "Sn", "118.710", "1.96", CATEGORIES[6] };
+    public static final String[] ANTIMONY = { "Antimony", "Sb", "121.760", "2.05", CATEGORIES[4] };
+    public static final String[] TELLURIUM = { "Tellurium", "Te", "127.60", "2.1", CATEGORIES[4] };
+    public static final String[] IODINE = { "Iodine", "I", "126.90447", "2.66", CATEGORIES[0] };
+    public static final String[] XENON = { "Xenon", "Xe", "131.293", "2.6", CATEGORIES[1] };
+    public static final String[] CAESIUM = { "Caesium", "Cs", "132.90545196", "0.79", CATEGORIES[2] };
+    public static final String[] BARIUM = { "Barium", "Ba", "137.327", "0.89", CATEGORIES[3] };
+    public static final String[] LANTHANUM = { "Lanthanum", "La", "138.90547", "1.1", CATEGORIES[8] };
+    public static final String[] CERIUM = { "Cerium", "Ce", "140.116", "1.12", CATEGORIES[8] };
+    public static final String[] PRASEODYMIUM = { "Praseodymium", "Pr", "140.90766", "1.13", CATEGORIES[8] };
+    public static final String[] NEODYMIUM = { "Neodymium", "Nd", "144.242", "1.14", CATEGORIES[8] };
+    public static final String[] PROMETHIUM = { "Promethium", "Pm", "145", "1.13", CATEGORIES[8] };
+    public static final String[] SAMARIUM = { "Samarium", "Sm", "150.36", "1.17", CATEGORIES[8] };
+    public static final String[] EUROPIUM = { "Europium", "Eu", "151.964", "1.2", CATEGORIES[8] };
+    public static final String[] GADOLINIUM = { "Gadolinium", "Gd", "157.25", "1.2", CATEGORIES[8] };
+    public static final String[] TERBIUM = { "Terbium", "Tb", "158.92535", "1.2", CATEGORIES[8] };
+    public static final String[] DYSPROSIUM = { "Dysprosium", "Dy", "162.500", "1.22", CATEGORIES[8] };
+    public static final String[] HOLMIUM = { "Holmium", "Ho", "114.818", "1.2", CATEGORIES[8] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
+    // public static final String[] = { "", "", "", "", CATEGORIES[] };
 
     public static final String[][] ATOMS = {
             HYDROGEN,
