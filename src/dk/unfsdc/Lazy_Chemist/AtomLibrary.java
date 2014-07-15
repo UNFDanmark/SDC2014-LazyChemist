@@ -81,15 +81,27 @@ public class AtomLibrary {
     public static final String[] TERBIUM = { "Terbium", "Tb", "158.92535", "1.2", CATEGORIES[8] };
     public static final String[] DYSPROSIUM = { "Dysprosium", "Dy", "162.500", "1.22", CATEGORIES[8] };
     public static final String[] HOLMIUM = { "Holmium", "Ho", "114.818", "1.2", CATEGORIES[8] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    public static final String[] INDIUM = { "Indium", "In", "114.818", "1.78", CATEGORIES[6] };
-    // public static final String[] = { "", "", "", "", CATEGORIES[] };
+    public static final String[] ERBIUM = { "Erbium", "Er", "167.259", "1.24", CATEGORIES[8] };
+    public static final String[] THULIUM = { "Thulium", "Tm", "168.93422", "1.25", CATEGORIES[8] };
+    public static final String[] YTTERBIUM = { "Ytterbium", "Yb", "173.054", "1.1", CATEGORIES[8] };
+    public static final String[] LUTETIUM = { "Lutetium", "Lu", "174.9668", "1.27", CATEGORIES[8] };
+    public static final String[] HAFNIUM = { "Hafnium", "Hf", "178.49", "1.3", CATEGORIES[7] };
+    public static final String[] TANTALUM = { "Tantalum", "Ta", "180.94788", "1.5", CATEGORIES[7] };
+    public static final String[] TUNGSTEN = { "TUNGSTEN", "W", "183.84", "2.36", CATEGORIES[7] };
+    public static final String[] RHENIUM = { "Rhenium", "Re", "186.207", "1.9", CATEGORIES[7] };
+    public static final String[] OSMIUM = { "Osmium", "Os", "190.23", "2.2", CATEGORIES[7] };
+    public static final String[] IRIDIUM = { "Iridium", "Ir", "192.217", "2.2", CATEGORIES[7] };
+    public static final String[] PLATINIUM = { "Platinium", "Pt", "195.084", "2.28", CATEGORIES[7] };
+    public static final String[] GOLD = { "Gold", "Au", "196.966569", "2.54", CATEGORIES[7] };
+    public static final String[] MERCURY = { "Mercury", "Hg", "200.592", "2.00", CATEGORIES[7] };
+    public static final String[] THALLIUM = { "Thallium", "Tl", "204.38", "1.62", CATEGORIES[6] };
+    public static final String[] LEAD = { "Lead", "Pb", "207.2", "1.87", CATEGORIES[6] };
+    public static final String[] BISMUTH = { "Bismuth", "Bi", "208.98040", "2.02", CATEGORIES[6] };
+    public static final String[] POLONIUM = { "Polonium", "Po", "209", "2.0", CATEGORIES[6] };
+    public static final String[] = { "", "", "", "", CATEGORIES[] };
+    public static final String[] = { "", "", "", "", CATEGORIES[] };
+    public static final String[] = { "", "", "", "", CATEGORIES[] };
+
 
     public static final String[][] ATOMS = {
             HYDROGEN,
