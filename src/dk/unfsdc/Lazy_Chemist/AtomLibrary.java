@@ -1,7 +1,7 @@
 package dk.unfsdc.Lazy_Chemist;
 
 public class AtomLibrary {
-/*
+
     public static final String[] CATEGORIES = {
             "Diatomic Nonmetals",       // 0
             "Noble Gases",              // 1
@@ -190,8 +190,7 @@ public class AtomLibrary {
             POLONIUM,
             ASTATINE,
             FRANCIUM,
-            RADIUM
+            RADIUM,
     };
-    */
 }
 

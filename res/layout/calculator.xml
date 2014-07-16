@@ -23,9 +23,17 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/editText3" android:layout_gravity="center_horizontal"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText4"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText5"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="Calculate"
             android:id="@+id/button"/>
 </LinearLayout>
