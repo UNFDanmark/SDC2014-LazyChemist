@@ -3,42 +3,72 @@ package dk.unfsdc.Lazy_Chemist;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import dk.unfsdc.Lazy_Chemist.AtomLibrary;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class ChemistMain extends Activity {
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        final EditText searchField = (EditText) findViewById(R.id.searchField);
-        final Button search = (Button) findViewById(R.id.search);
+        BufferedReader reader = null;
+        try {
+            InputStream is = getAssets().open("atoms.csv");
+            reader = new BufferedReader(new InputStreamReader(is));
+            ArrayList<Atom> atomList = new ArrayList<Atom>();
+            String s = null;
+            while (reader.ready()) {
+                s = reader.readLine();
+                //number
+                String[] atomlib = s.split(",");
+                int number = Integer.parseInt(atomlib[0]);
+                System.out.print(atomlib[0]);
+                //symbol
+                String symbol = atomlib[1];
+                System.out.print(atomlib[1]);
+                //name1
+                String name1 = atomlib[2];
+                System.out.print(atomlib[2]);
+                //weight
+                double weight = Double.parseDouble(atomlib[3]);
+                System.out.print(atomlib[3]);
+                //electroNegativity
+                double electroNegativity = Double.parseDouble(atomlib[6]);
+                System.out.print(atomlib[6]);
+                //category
+                String category = atomlib[14];
+                System.out.print(atomlib[14]);
+                //group
+                String group = atomlib[19];
+                System.out.print(atomlib[19]);
+                //year
+                int year = Integer.parseInt(atomlib[20]);
+                System.out.print(atomlib[20]);
 
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String input = searchField.getText().toString();
-                if(!input.equals("")) {
-                    for(int i = 0; i < AtomLibrary.ATOMS.length; i ++) {
-                        if(input.toLowerCase().equals(AtomLibrary.ATOMS[i][0].toLowerCase()) || input.equals(AtomLibrary.ATOMS[i][1]) || input.equals((i + 1) + "")) {
-                            System.out.println(AtomLibrary.ATOMS[i][0]);
-                            return;
-                        }
-                    }
-                    String[] letters = input.split("");
-                    for(int i = 0; i < letters.length; i ++) {
-                        if(letters[i] == letters[i].toUpperCase()) {
-                            if(letters[i + 1] != letters[i + 1].toLowerCase()) {
+                Atom atom = new Atom(number,symbol,name1,weight,electroNegativity,category,group,year);
+            }
 
-                            } else {
-
-                            }
-                        }
-                    }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
-        });
+        }
     }
 }
