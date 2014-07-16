@@ -98,10 +98,10 @@ public class AtomLibrary {
     public static final String[] LEAD = { "Lead", "Pb", "207.2", "1.87", CATEGORIES[6] };
     public static final String[] BISMUTH = { "Bismuth", "Bi", "208.98040", "2.02", CATEGORIES[6] };
     public static final String[] POLONIUM = { "Polonium", "Po", "209", "2.0", CATEGORIES[6] };
-    public static final String[] = { "", "", "", "", CATEGORIES[] };
-    public static final String[] = { "", "", "", "", CATEGORIES[] };
-    public static final String[] = { "", "", "", "", CATEGORIES[] };
-
+    public static final String[] ASTATINE = { "Astatine", "At", "210", "2.2", CATEGORIES[4] };
+    public static final String[] FRANCIUM = { "Francium", "Fr", "223", "0.7", CATEGORIES[2] };
+    public static final String[] RADIUM = { "Radium", "Ra", "226", "0.9", CATEGORIES[3] };
+    // public static final String[] = { "", "", "", "", CATEGORIES[] };
 
     public static final String[][] ATOMS = {
             HYDROGEN,
@@ -140,7 +140,57 @@ public class AtomLibrary {
             SELENIUM,
             BROMINE,
             KRYPTON,
-            RUBIDIUM
+            RUBIDIUM,
+            STRONTIUM,
+            YTTRIUM,
+            ZIRCONIUM,
+            NIOBIUM,
+            MOLYBDENUM,
+            TECHNETIUM,
+            RUTHENIUM,
+            RHODIUM,
+            PALLADIUM,
+            SILVER,
+            CADMIUM,
+            INDIUM,
+            TIN,
+            ANTIMONY,
+            TELLURIUM,
+            IODINE,
+            XENON,
+            CAESIUM,
+            BARIUM,
+            LANTHANUM,
+            CERIUM,
+            PRASEODYMIUM,
+            NEODYMIUM,
+            PROMETHIUM,
+            SAMARIUM,
+            EUROPIUM,
+            GADOLINIUM,
+            TERBIUM,
+            DYSPROSIUM,
+            HOLMIUM,
+            ERBIUM,
+            THULIUM,
+            YTTERBIUM,
+            LUTETIUM,
+            HAFNIUM,
+            TANTALUM,
+            TUNGSTEN,
+            RHENIUM,
+            OSMIUM,
+            IRIDIUM,
+            PLATINIUM,
+            GOLD,
+            MERCURY,
+            THALLIUM,
+            LEAD,
+            BISMUTH,
+            POLONIUM,
+            ASTATINE,
+            FRANCIUM,
+            RADIUM
     };
     */
 }
