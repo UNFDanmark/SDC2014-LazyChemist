@@ -25,6 +25,8 @@ public class MolarityCalculator extends Activity {
         volume.setHint("Volume");
         molarMass.setHint("Molar Mass [Formula]");
         molarity.setHint("Molarity");
+
+
         mol.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -532,5 +534,7 @@ public class MolarityCalculator extends Activity {
                 }
             }
         });
+
+        final Button search = (Button) findViewById(R.id.button)
     }
 }
