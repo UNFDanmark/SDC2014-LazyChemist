@@ -61,8 +61,7 @@ public class Electronegativity extends Activity {
                             public void onClick(View v) {
                                 double EN1 = Double.parseDouble(ENText1.getText().toString());
                                 double EN2 = Double.parseDouble(ENText2.getText().toString());
-                                atomList.contains(EN1);
-                                atomList.contains(EN2);
+                                if (atomList.contains(EN1) || atomList.contains(EN2));
 
                                 String answer;
                                 String type;
@@ -101,4 +100,3 @@ public class Electronegativity extends Activity {
         });
     }
 }
-//test
