@@ -535,6 +535,6 @@ public class MolarityCalculator extends Activity {
             }
         });
 
-        final Button search = (Button) findViewById(R.id.button)
+        final Button search = (Button) findViewById(R.id.button);
     }
 }
