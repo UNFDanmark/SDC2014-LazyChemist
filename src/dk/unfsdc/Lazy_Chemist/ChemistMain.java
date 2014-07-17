@@ -2,6 +2,7 @@ package dk.unfsdc.Lazy_Chemist;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -57,11 +58,16 @@ public class ChemistMain extends Activity {
                 System.out.print(atomlib[20]);
 
                 Atom atom = new Atom(number,symbol,name1,weight,electroNegativity,category,group,year);
+
             }
 
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
+        } catch (IndexOutOfBoundsException e) {
+            Log.w("DATA", "Object mangler data");
+
+        }
+            finally {
             if (reader != null) {
                 try {
                     reader.close();
@@ -72,4 +78,4 @@ public class ChemistMain extends Activity {
         }
     }
 }
-//test
+

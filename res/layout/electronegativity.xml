@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:gravity="fill_vertical">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Electronegativity"
+            android:id="@+id/textView" android:layout_weight="0.4" android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="0.4">
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ENText1" android:layout_weight="1" android:text="1. Atom"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ENText2" android:layout_alignParentStart="true"
+                android:layout_weight="1" android:text="2. Atom"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:id="@+id/ENCalculate"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/ENTextViewSvar" android:layout_marginTop="30dp"/>
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/ENTextViewType"
+              android:layout_marginTop="10dp"/>
+</LinearLayout>

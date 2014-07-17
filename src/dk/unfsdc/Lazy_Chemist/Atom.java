@@ -1,8 +1,5 @@
 package dk.unfsdc.Lazy_Chemist;
 
-/**
- * Created by sdc on 7/16/14.
- */
 public class Atom {
     int number;
     String symbol;
