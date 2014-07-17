@@ -1,12 +1,17 @@
 package dk.unfsdc.Lazy_Chemist;
 
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -26,6 +31,18 @@ public class Electronegativity extends Activity {
         final TextView EnTextViewType = (TextView) findViewById(R.id.ENTextViewType);
         ENText1.setHint("1. Atom");
         ENText2.setHint("2. Atom");
+        //atomlib
+        ListView listView = (ListView) findViewById(R.id.listViewAtomlistview);
+
+        AtomLibrary atomLibrary = new AtomLibrary();
+        atomLibrary.read(getAssets());
+
+        final ArrayList<Atom> atomList = atomLibrary.getAtoms();
+
+        AtomAdapter atomAdapter = new AtomAdapter(atomList, getApplicationContext());
+        listView.setAdapter(atomAdapter);
+        //atomlib end
+
         ENText1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -44,6 +61,9 @@ public class Electronegativity extends Activity {
                             public void onClick(View v) {
                                 double EN1 = Double.parseDouble(ENText1.getText().toString());
                                 double EN2 = Double.parseDouble(ENText2.getText().toString());
+                                atomList.contains(EN1);
+                                atomList.contains(EN2);
+
                                 String answer;
                                 String type;
                                 if (EN1 < 0 || EN2 < 0) {

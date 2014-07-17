@@ -1,7 +1,81 @@
 package dk.unfsdc.Lazy_Chemist;
 
-public class AtomLibrary {
+import android.content.res.AssetManager;
+import android.util.Log;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class AtomLibrary {
+    ArrayList<Atom> atoms = new ArrayList<Atom>();
+
+    public void read(AssetManager assetManager ) {
+
+        BufferedReader reader = null;
+        try {
+            InputStream is = assetManager.open("atoms_no_oxidation.csv");
+            reader = new BufferedReader(new InputStreamReader(is));
+            String s = null;
+            while (reader.ready()) {
+                s = reader.readLine();
+                //number
+                String[] atomlib = s.split(",");
+                Log.d("atoms", Arrays.asList(atomlib).toString());
+                Log.d("atoms", atomlib.length + "");
+                int number = Integer.parseInt(atomlib[0]);
+                System.out.print(atomlib[0]);
+                //symbol
+                String symbol = atomlib[1];
+                System.out.print(atomlib[1]);
+                //name1
+                String name1 = atomlib[2];
+                System.out.print(atomlib[2]);
+                //weight
+                double weight = Double.parseDouble(atomlib[3]);
+                System.out.print(atomlib[3]);
+                //electroNegativity
+                double electroNegativity = Double.parseDouble(atomlib[6]);
+                System.out.print(atomlib[6]);
+                //category
+                String category = atomlib[13];
+                System.out.print(atomlib[13]);
+                //group
+                String group = atomlib[17];
+                System.out.print(atomlib[17]);
+                //year
+                int year = Integer.parseInt(atomlib[18]);
+                System.out.print(atomlib[18]);
+
+                Atom atom = new Atom(number, symbol, name1, weight, electroNegativity, category, group, year);
+
+                atoms.add(atom);
+
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    public ArrayList<Atom> getAtoms() {
+        return atoms;
+    }
+
+    /*
     public static final String[] CATEGORIES = {
             "Diatomic Nonmetals",       // 0
             "Noble Gases",              // 1
@@ -193,6 +267,7 @@ public class AtomLibrary {
             FRANCIUM,
             RADIUM,
     };
+*/
 
 }
 

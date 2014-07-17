@@ -18,7 +18,7 @@ public class MolarityCalculator extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator);
-
+/*
         final EditText mol = (EditText) findViewById(R.id.editText);
         final EditText mass = (EditText) findViewById(R.id.editText2);
         final EditText volume = (EditText) findViewById(R.id.editText3);
@@ -520,5 +520,5 @@ public class MolarityCalculator extends Activity {
                 }
             }
         });
-    }
+    */}
 }

@@ -8,7 +8,11 @@
         <activity android:name=".Electronegativity"
                   android:label="Lazy Chemist"
                   android:theme="@android:style/Theme.NoTitleBar"
-                  android:screenOrientation = "portrait">
+                  android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".ChemistMain"
+                >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
