@@ -12,6 +12,7 @@ public class AtomLibrary {
             "Other Metals",             // 6
             "Transition Metals",        // 7
             "Lanthanides",              // 8
+            "Actinide",                 // 9
     };
 
     public static final String[] HYDROGEN = { "Hydrogen", "H", "1.008", "2.20", CATEGORIES[0] };
