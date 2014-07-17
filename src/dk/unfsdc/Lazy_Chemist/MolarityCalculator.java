@@ -78,6 +78,7 @@ public class MolarityCalculator extends Activity {
                 boolean[] inputIsEmpty = { input[0].isEmpty(), input[1].isEmpty(), input[2].isEmpty(), input[3].isEmpty(), input[4].isEmpty() };
                 String ERROR_MESSAGE = "Error";
                 String UNIT_ERROR_MESSAGE = " ( No such unit as: ";
+                int amountOfDecimals = 100000; // + 0 for ekstra decimal.
 
                 double MOL = 0;
                 String[] MOL_UNITS = { "mol" };
@@ -145,9 +146,9 @@ public class MolarityCalculator extends Activity {
                 }
 
                 double MASS = 0;
-                String[] MASS_UNITS = { "grams" };
-                String[] MASS_SHORT_UNITS = { "g" };
-                double[] MASS_UNIT_VALUES = { 1.0 };
+                String[] MASS_UNITS = { "grams", "gram", "tonne", "ton" };
+                String[] MASS_SHORT_UNITS = { "g", "g", "æøå", "t" };
+                double[] MASS_UNIT_VALUES = { 1.0, 1.0, 1000.0, 907.185 };
                 int MASS_UNIT = 0;
                 int MASS_UNIT_PREFIX = 0;
                 boolean MASS_ERROR = false;
@@ -158,13 +159,13 @@ public class MolarityCalculator extends Activity {
                 } else if (input[1].matches("[a-zA-Z]+")) {
                     boolean noMatch = true;
                     for (int i = 0; i < MASS_UNITS.length; i ++) {
-                        if (input[0].toLowerCase().equals(MASS_UNITS[i])) {
+                        if (input[1].toLowerCase().equals(MASS_UNITS[i])) {
                             MASS_UNIT = i;
                             noMatch = false;
                         }
                         for (int j = 0; j < UnitPrefixLibrary.UNIT_PREFIXES.length; j ++) {
-                            if (input[0].toLowerCase().equals(UnitPrefixLibrary.UNIT_PREFIXES[j] + MASS_UNITS[i]) ||
-                                    input[0].toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + MASS_UNITS[i])) {
+                            if (input[1].toLowerCase().equals(UnitPrefixLibrary.UNIT_PREFIXES[j] + MASS_UNITS[i]) ||
+                                    input[1].toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + MASS_UNITS[i])) {
                                 MASS_UNIT = i;
                                 MASS_UNIT_PREFIX = j;
                                 noMatch = false;
@@ -172,7 +173,7 @@ public class MolarityCalculator extends Activity {
                         }
                     }
                     if (noMatch) {
-                        MASS_NONEXISTANT_UNIT = input[0];
+                        MASS_NONEXISTANT_UNIT = input[1];
                     }
                 } else if (!inputIsEmpty[1]) {
                     String[] characters = input[1].split("");
@@ -201,8 +202,8 @@ public class MolarityCalculator extends Activity {
                                 if (unitPlaceHolder.toLowerCase().equals((UnitPrefixLibrary.UNIT_PREFIXES[j] + MASS_UNITS[i])) ||
                                         unitPlaceHolder.toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + MASS_UNITS[i]) ||
                                         unitPlaceHolder.toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + MASS_SHORT_UNITS[i])) {
-                                    MOL_UNIT = i;
-                                    MOL_UNIT_PREFIX = j;
+                                    MASS_UNIT = i;
+                                    MASS_UNIT_PREFIX = j;
                                 }
                             }
                         }
@@ -393,6 +394,7 @@ public class MolarityCalculator extends Activity {
                 if (MOL_ERROR) {
                     mol.setText(ERROR_MESSAGE);
                 } else if (MOL != 0) {
+                    MOL = (double) Math.round(MOL * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
                     mol.setText((MOL * MOL_UNIT_VALUES[MOL_UNIT]) +
                             " " + UnitPrefixLibrary.UNIT_SHORT_PREFIXES[MOL_UNIT_PREFIX] + MOL_UNITS[MOL_UNIT] +
                             ((MOL_NONEXISTANT_UNIT != "") ? UNIT_ERROR_MESSAGE + MOL_NONEXISTANT_UNIT + " )" : ""));
@@ -401,14 +403,16 @@ public class MolarityCalculator extends Activity {
                 // Mass
 
                 if (MOL != 0 && MOLAR_MASS != 0 && MASS == 0) {
-                    MASS = MOL * MOLAR_MASS;
+                    MASS = MOL * MOLAR_MASS / UnitPrefixLibrary.UNIT_PREFIX_VALUES[MASS_UNIT_PREFIX];
                 }
 
                 if (MASS_ERROR) {
                     mass.setText(ERROR_MESSAGE);
                 } else if (MASS != 0) {
-                    mass.setText((MASS * MASS_UNIT_VALUES[MASS_UNIT]) / UnitPrefixLibrary.UNIT_PREFIX_VALUES[MASS_UNIT_PREFIX] +
-                            " " + UnitPrefixLibrary.UNIT_PREFIXES[MASS_UNIT_PREFIX] + MASS_UNITS[MASS_UNIT]);
+                    MASS = (double) Math.round(MASS * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
+                    mass.setText((MASS * MASS_UNIT_VALUES[MASS_UNIT]) +
+                            " " + UnitPrefixLibrary.UNIT_SHORT_PREFIXES[MASS_UNIT_PREFIX] + MASS_SHORT_UNITS[MASS_UNIT] +
+                            ((MASS_NONEXISTANT_UNIT != "") ? UNIT_ERROR_MESSAGE + MASS_NONEXISTANT_UNIT + " )" : ""));
                 }
 
                 // Volume
@@ -420,6 +424,7 @@ public class MolarityCalculator extends Activity {
                 if (VOLUME_ERROR) {
                     volume.setText(ERROR_MESSAGE);
                 } else if (VOLUME != 0) {
+                    VOLUME = (double) Math.round(VOLUME * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
                     volume.setText((VOLUME * VOLUME_UNIT_VALUES[VOLUME_UNIT]) / UnitPrefixLibrary.UNIT_PREFIX_VALUES[VOLUME_UNIT_PREFIX] +
                             " " + UnitPrefixLibrary.UNIT_PREFIXES[VOLUME_UNIT_PREFIX] + VOLUME_UNITS[VOLUME_UNIT]);
                 }
@@ -433,6 +438,7 @@ public class MolarityCalculator extends Activity {
                 if (MOLAR_MASS_ERROR) {
                     molarMass.setText(ERROR_MESSAGE);
                 } else if (MOLAR_MASS != 0) {
+                    MOLAR_MASS = (double) Math.round(MOLAR_MASS * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
                     molarMass.setText((MOLAR_MASS * MOLAR_MASS_UNIT_VALUES[MOLAR_MASS_UNIT]) / UnitPrefixLibrary.UNIT_PREFIX_VALUES[MOLAR_MASS_UNIT_PREFIX] +
                             " " + UnitPrefixLibrary.UNIT_PREFIXES[MOLAR_MASS_UNIT_PREFIX] + MOLAR_MASS_UNITS[MOLAR_MASS_UNIT]);
                 }
@@ -448,6 +454,7 @@ public class MolarityCalculator extends Activity {
                 if (MOLARITY_ERROR) {
                     molarity.setText(ERROR_MESSAGE);
                 } else if (MOLARITY != 0) {
+                    MOLARITY = (double) Math.round(MOLARITY * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
                     molarity.setText((MOLARITY * MOLARITY_UNIT_VALUES[MOLARITY_UNIT]) / UnitPrefixLibrary.UNIT_PREFIX_VALUES[MOLARITY_UNIT_PREFIX] +
                             " " + UnitPrefixLibrary.UNIT_PREFIXES[MOLARITY_UNIT_PREFIX] + MOLARITY_UNITS[MOLARITY_UNIT]);
                 }
