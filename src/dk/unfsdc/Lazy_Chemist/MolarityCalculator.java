@@ -219,20 +219,28 @@ public class MolarityCalculator extends Activity {
                 int VOLUME_UNIT = 0;
                 int VOLUME_UNIT_PREFIX = 0;
                 boolean VOLUME_ERROR = false;
+                String VOLUME_NONEXISTANT_UNIT = "";
 
                 if (input[2].matches("[0-9]+")) {
                     VOLUME = Double.parseDouble(input[2]);
                 } else if (input[2].matches("[a-zA-Z]+")) {
+                    boolean noMatch = true;
                     for (int i = 0; i < VOLUME_UNITS.length; i ++) {
                         if (input[2].toLowerCase().equals(VOLUME_UNITS[i])) {
                             VOLUME_UNIT = i;
+                            noMatch = false;
                         }
                         for (int j = 0; j < UnitPrefixLibrary.UNIT_PREFIXES.length; j ++) {
-                            if (input[2].toLowerCase().equals((UnitPrefixLibrary.UNIT_PREFIXES[i] + VOLUME_UNITS[i]).toLowerCase())) {
+                            if (input[2].toLowerCase().equals(UnitPrefixLibrary.UNIT_PREFIXES[j] + VOLUME_UNITS[i]) ||
+                                    input[2].toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + VOLUME_UNITS[i])) {
                                 VOLUME_UNIT = i;
                                 VOLUME_UNIT_PREFIX = j;
+                                noMatch = false;
                             }
                         }
+                    }
+                    if (noMatch) {
+                        VOLUME_NONEXISTANT_UNIT = input[2];
                     }
                 } else if (!inputIsEmpty[2]) {
                     String[] characters = input[2].split("");
@@ -258,7 +266,9 @@ public class MolarityCalculator extends Activity {
                                 VOLUME_UNIT = i;
                             }
                             for (int j = 0; j < UnitPrefixLibrary.UNIT_PREFIXES.length; j ++) {
-                                if (input[2].toLowerCase().equals((UnitPrefixLibrary.UNIT_PREFIXES[i] + VOLUME_UNITS[i]).toLowerCase())) {
+                                if (unitPlaceHolder.toLowerCase().equals((UnitPrefixLibrary.UNIT_PREFIXES[j] + VOLUME_UNITS[i])) ||
+                                        unitPlaceHolder.toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + VOLUME_UNITS[i]) ||
+                                        unitPlaceHolder.toLowerCase().equals(UnitPrefixLibrary.UNIT_SHORT_PREFIXES[j] + VOLUME_SHORT_UNITS[i])) {
                                     VOLUME_UNIT = i;
                                     VOLUME_UNIT_PREFIX = j;
                                 }
@@ -276,6 +286,7 @@ public class MolarityCalculator extends Activity {
                 int MOLAR_MASS_UNIT = 0;
                 int MOLAR_MASS_UNIT_PREFIX = 0;
                 boolean MOLAR_MASS_ERROR = false;
+                String MOLAR_MASS_NONEXISTANT_UNIT = "";
 
                 if (input[3].matches("[0-9]+")) {
                     MOLAR_MASS = Double.parseDouble(input[3]);
