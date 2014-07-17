@@ -20,11 +20,11 @@ public class MolarityCalculator extends Activity {
         final EditText volume = (EditText) findViewById(R.id.editText3);
         final EditText molarMass = (EditText) findViewById(R.id.editText4);
         final EditText molarity = (EditText) findViewById(R.id.editText5);
-        mol.setHint("Amount of Substance");
-        mass.setHint("Mass");
-        volume.setHint("Volume");
-        molarMass.setHint("Molar Mass ( or Formula )");
-        molarity.setHint("Molarity");
+        mol.setHint("Amount of Substance (Mol)");
+        mass.setHint("Mass (g)");
+        volume.setHint("Volume (L)");
+        molarMass.setHint("Molar Mass ( or Formula ) (g/mol)");
+        molarity.setHint("Molarity (mol/L)");
         mol.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
