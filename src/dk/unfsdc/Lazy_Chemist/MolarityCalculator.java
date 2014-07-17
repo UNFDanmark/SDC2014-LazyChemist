@@ -23,7 +23,7 @@ public class MolarityCalculator extends Activity {
         mol.setHint("Amount of Substance");
         mass.setHint("Mass");
         volume.setHint("Volume");
-        molarMass.setHint("Molar Mass ( or Formula )");
+        molarMass.setHint("Molar Mass [Formula]");
         molarity.setHint("Molarity");
         mol.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -290,7 +290,7 @@ public class MolarityCalculator extends Activity {
 
                 if (input[3].matches("[0-9]+")) {
                     MOLAR_MASS = Double.parseDouble(input[3]);
-                } else if (input[3].substring(0, 1).matches("[A-Za-z]")) {
+                } else if (!inputIsEmpty[3] && input[3].substring(0, 1).matches("[A-Za-z]")) {
                     boolean noMatch = true;
                     for (int i = 0; i < MOLAR_MASS_UNITS.length; i++) {
                         if (input[3].toLowerCase().equals(MOLAR_MASS_UNITS[i])) {

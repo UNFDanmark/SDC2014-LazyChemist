@@ -10,9 +10,8 @@
                   android:theme="@android:style/Theme.NoTitleBar"
                   android:screenOrientation="portrait">
 
-        </activity>
-        <activity android:name=".ChemistMain"
-                >
+        <!-- </activity> -->
+        <!-- <activity android:name=".ChemistMain"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
