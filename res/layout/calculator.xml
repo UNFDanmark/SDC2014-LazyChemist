@@ -4,7 +4,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:focusable="false"
-                    android:background="@color/gray">
+                    android:background="@color/gray" android:weightSum="1">
     <EditText
             android:layout_width="match_parent"
             android:layout_height="42dp"
@@ -16,6 +16,7 @@
             android:layout_marginTop="13dp"
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
+            android:alpha="0.95"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -28,6 +29,7 @@
             android:layout_marginTop="13dp"
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
+            android:alpha="0.95"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -40,6 +42,7 @@
             android:layout_marginTop="13dp"
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
+            android:alpha="0.95"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -52,6 +55,7 @@
             android:layout_marginTop="13dp"
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
+            android:alpha="0.95"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -64,9 +68,11 @@
             android:layout_marginTop="13dp"
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
+            android:textSize="19dp"
+            android:alpha="0.95"
             android:background="@color/white"/>
     <Button
-            android:layout_width="177dp"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:text="Calculate"
             android:background="@drawable/shape"
@@ -75,5 +81,46 @@
             android:layout_marginLeft="13dp"
             android:layout_marginTop="13dp"
             android:height="42dp"
+            android:textSize="19dp"
             android:id="@+id/button"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="13dp"
+                android:alpha="0.95"
+                android:text="Search"
+                android:textSize="19dp"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginBottom="13dp"
+                    android:text="Molarity"
+                    android:alpha="0.30"
+                    android:textSize="19dp"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginRight="13dp"
+                    android:text="Search"
+                    android:alpha="0.95"
+                    android:textSize="19dp"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
