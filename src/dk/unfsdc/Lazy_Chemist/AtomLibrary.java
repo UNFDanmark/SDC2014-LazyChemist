@@ -75,7 +75,6 @@ public class AtomLibrary {
         return atoms;
     }
 
-    /*
     public static final String[] CATEGORIES = {
             "Diatomic Nonmetals",       // 0
             "Noble Gases",              // 1
@@ -267,7 +266,5 @@ public class AtomLibrary {
             FRANCIUM,
             RADIUM,
     };
-*/
-
 }
 
