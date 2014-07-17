@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -24,11 +23,11 @@
             android:ems="10"
             android:inputType="textNoSuggestions"
             android:id="@+id/editText2"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -36,11 +35,11 @@
             android:ems="10"
             android:inputType="textNoSuggestions"
             android:id="@+id/editText3"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -48,11 +47,11 @@
             android:ems="10"
             android:inputType="textNoSuggestions"
             android:id="@+id/editText4"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -60,15 +59,21 @@
             android:ems="10"
             android:inputType="textNoSuggestions"
             android:id="@+id/editText5"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
             android:background="@color/white"/>
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="177dp"
             android:layout_height="wrap_content"
             android:text="Calculate"
+            android:background="@drawable/shape"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:height="42dp"
             android:id="@+id/button"/>
 </LinearLayout>

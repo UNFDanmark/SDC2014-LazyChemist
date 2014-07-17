@@ -5,21 +5,17 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="19"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name=".Electronegativity"
+        <activity android:name=".MolarityCalculator"
                   android:label="Lazy Chemist"
                   android:theme="@android:style/Theme.NoTitleBar"
                   android:screenOrientation="portrait">
+
+        <!-- </activity> -->
+        <!-- <activity android:name=".ChemistMain"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".ChemistMain"
-                >
-
-        </activity>
-        <activity android:name=".MolarityCalculator">
-
         </activity>
     </application>
 </manifest>
