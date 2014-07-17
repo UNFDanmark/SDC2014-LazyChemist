@@ -6,7 +6,7 @@
     <uses-sdk android:minSdkVersion="19"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <activity android:name=".MolarityCalculator"
-                  android:label="@string/app_name"
+                  android:label="Lazy Chemist"
                   android:theme="@android:style/Theme.NoTitleBar"
                   android:screenOrientation = "portrait">
             <intent-filter>
