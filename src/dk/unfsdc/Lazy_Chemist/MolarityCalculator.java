@@ -14,7 +14,7 @@ public class MolarityCalculator extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator);
-/*
+
         final EditText mol = (EditText) findViewById(R.id.editText);
         final EditText mass = (EditText) findViewById(R.id.editText2);
         final EditText volume = (EditText) findViewById(R.id.editText3);
@@ -308,9 +308,9 @@ public class MolarityCalculator extends Activity {
                         }
                     }
                     if (noMatch) {
-                        for(int i = 0; i < AtomLibrary2.ATOMS.length; i ++) {
-                            if (AtomLibrary2.ATOMS[i][0].toLowerCase().equals(input[3].toLowerCase())) {
-                                MOLAR_MASS = Double.parseDouble(AtomLibrary2.ATOMS[i][2]);
+                        for(int i = 0; i < AtomLibrary.ATOMS.length; i ++) {
+                            if (AtomLibrary.ATOMS[i][0].toLowerCase().equals(input[3].toLowerCase())) {
+                                MOLAR_MASS = Double.parseDouble(AtomLibrary.ATOMS[i][2]);
                                 noMatch = false;
                             }
                         }
@@ -342,9 +342,9 @@ public class MolarityCalculator extends Activity {
                             if (elements.get(i).matches("[0-9]")) {
                                 elementValues.set(elementValues.size() - 1, elementValues.get(elementValues.size() - 1) * Double.parseDouble(elements.get(i)));
                             } else {
-                                for (int j = 0; j < AtomLibrary2.ATOMS.length; j++) {
-                                    if (elements.get(i).equals(AtomLibrary2.ATOMS[j][1])) {
-                                        elementValues.add(Double.parseDouble(AtomLibrary2.ATOMS[j][2]));
+                                for (int j = 0; j < AtomLibrary.ATOMS.length; j++) {
+                                    if (elements.get(i).equals(AtomLibrary.ATOMS[j][1])) {
+                                        elementValues.add(Double.parseDouble(AtomLibrary.ATOMS[j][2]));
                                     }
                                 }
                             }
@@ -532,5 +532,5 @@ public class MolarityCalculator extends Activity {
                 }
             }
         });
-    */}
+    }
 }

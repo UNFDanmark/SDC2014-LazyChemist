@@ -1,7 +1,6 @@
 package dk.unfsdc.Lazy_Chemist;
 
 import android.app.Activity;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,9 +8,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
