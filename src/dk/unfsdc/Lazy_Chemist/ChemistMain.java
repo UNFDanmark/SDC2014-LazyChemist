@@ -69,12 +69,14 @@ public class ChemistMain extends Activity {
                             vaegt.setText(AtomLibrary.ATOMS[i][2]);
                             elektronegativitet.setText(AtomLibrary.ATOMS[i][3]);
                             kategori.setText(AtomLibrary.ATOMS[i][4]);
-                        } else if (i + 1 == Integer.parseInt(input)) {
-                            navn.setText(AtomLibrary.ATOMS[i][0]);
-                            forkortelse.setText(AtomLibrary.ATOMS[i][1]);
-                            vaegt.setText(AtomLibrary.ATOMS[i][2]);
-                            elektronegativitet.setText(AtomLibrary.ATOMS[i][3]);
-                            kategori.setText(AtomLibrary.ATOMS[i][4]);
+                        } else if (input.matches("[0-9]+")) {
+                            if (i + 1 == Integer.parseInt(input)) {
+                                navn.setText(AtomLibrary.ATOMS[i][0]);
+                                forkortelse.setText(AtomLibrary.ATOMS[i][1]);
+                                vaegt.setText(AtomLibrary.ATOMS[i][2]);
+                                elektronegativitet.setText(AtomLibrary.ATOMS[i][3]);
+                                kategori.setText(AtomLibrary.ATOMS[i][4]);
+                            }
                         }
                     }
                 }
