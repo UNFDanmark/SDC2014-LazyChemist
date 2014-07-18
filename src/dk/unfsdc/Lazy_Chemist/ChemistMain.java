@@ -69,6 +69,12 @@ public class ChemistMain extends Activity {
                             vaegt.setText(AtomLibrary.ATOMS[i][2]);
                             elektronegativitet.setText(AtomLibrary.ATOMS[i][3]);
                             kategori.setText(AtomLibrary.ATOMS[i][4]);
+                        } else if (i == Integer.parseInt(input)) {
+                            navn.setText(AtomLibrary.ATOMS[i][0]);
+                            forkortelse.setText(AtomLibrary.ATOMS[i][1]);
+                            vaegt.setText(AtomLibrary.ATOMS[i][2]);
+                            elektronegativitet.setText(AtomLibrary.ATOMS[i][3]);
+                            kategori.setText(AtomLibrary.ATOMS[i][4]);
                         }
                     }
                 }
