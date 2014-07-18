@@ -87,7 +87,7 @@
             android:layout_marginTop="13dp"
             android:height="42dp"
             android:textSize="19dp"
-            android:id="@+id/button"/>
+            android:id="@+id/buttons"/>
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
