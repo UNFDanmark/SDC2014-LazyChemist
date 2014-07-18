@@ -17,6 +17,7 @@
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
             android:alpha="0.95"
+            android:textColor="@color/darkgray"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -30,6 +31,7 @@
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
             android:alpha="0.95"
+            android:textColor="@color/darkgray"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -43,6 +45,7 @@
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
             android:alpha="0.95"
+            android:textColor="@color/darkgray"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -56,6 +59,7 @@
             android:paddingLeft="11dp"
             android:paddingRight="11dp"
             android:alpha="0.95"
+            android:textColor="@color/darkgray"
             android:background="@color/white"/>
     <EditText
             android:layout_width="match_parent"
@@ -70,6 +74,7 @@
             android:paddingRight="11dp"
             android:textSize="19dp"
             android:alpha="0.95"
+            android:textColor="@color/darkgray"
             android:background="@color/white"/>
     <Button
             android:layout_width="165dp"
@@ -101,7 +106,9 @@
                 android:layout_marginLeft="13dp"
                 android:alpha="0.95"
                 android:text="Search"
-                android:textSize="19dp"/>
+                android:textSize="19dp"
+                android:textColor="@color/darkgray"
+                android:id="@+id/search"/>
             <Button
                     android:layout_width="0dp"
                     android:layout_height="42dp"
@@ -110,7 +117,9 @@
                     android:layout_marginBottom="13dp"
                     android:text="Molarity"
                     android:alpha="0.30"
-                    android:textSize="19dp"/>
+                    android:textColor="@color/darkgray"
+                    android:textSize="19dp"
+                    android:id="@+id/molarity"/>
             <Button
                     android:layout_width="0dp"
                     android:layout_height="42dp"
@@ -118,9 +127,11 @@
                     android:background="@color/white"
                     android:layout_marginBottom="13dp"
                     android:layout_marginRight="13dp"
-                    android:text="Search"
+                    android:text="EN"
                     android:alpha="0.95"
-                    android:textSize="19dp"/>
+                    android:textColor="@color/darkgray"
+                    android:textSize="19dp"
+                    android:id="@+id/EN"/>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

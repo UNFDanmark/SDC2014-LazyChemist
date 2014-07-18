@@ -1,6 +1,7 @@
 package dk.unfsdc.Lazy_Chemist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +21,13 @@ public class MolarityCalculator extends Activity {
         final EditText volume = (EditText) findViewById(R.id.editText3);
         final EditText molarMass = (EditText) findViewById(R.id.editText4);
         final EditText molarity = (EditText) findViewById(R.id.editText5);
-        mol.setHint("Amount of Substance (mol)");
-        mass.setHint("Mass (g)");
-        volume.setHint("Volume (L)");
-        molarMass.setHint("Molar Mass [Formula] (g/mol)");
-        molarity.setHint("Molarity (mol/L)");
+        mol.setHint("Amount of Substance");
+        mass.setHint("Mass");
+        volume.setHint("Volume");
+        molarMass.setHint("Molar Mass [Formula]");
+        molarity.setHint("Molarity");
+
+
         mol.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -530,6 +533,25 @@ public class MolarityCalculator extends Activity {
                     molarity.setText((MOLARITY * MOLARITY_UNIT_VALUES[MOLARITY_UNIT]) +
                             " " + UnitPrefixLibrary.UNIT_PREFIXES[MOLARITY_UNIT_PREFIX] + MOLARITY_UNITS[MOLARITY_UNIT]);
                 }
+            }
+        });
+
+        final Button search = (Button) findViewById(R.id.search);
+        final Button EN = (Button) findViewById(R.id.EN);
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ChemistMain.class);
+                startActivity(i);
+            }
+        });
+
+        EN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Electronegativity.class);
+                startActivity(i);
             }
         });
     }

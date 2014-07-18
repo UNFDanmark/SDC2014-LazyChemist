@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/gray">
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" android:weightSum="1">
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/searchField" android:layout_alignParentTop="true" android:layout_toLeftOf="@+id/search"
-                android:maxLength="20" android:layout_weight="1"/>
+                android:layout_width="250dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:inputType="textNoSuggestions"
+                android:id="@+id/editText2"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:alpha="0.95"
+                android:textColor="@color/darkgray"
+                android:background="@color/white"/>
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
                 android:text="Search"
-                android:id="@+id/search" android:layout_alignBottom="@+id/searchField" android:layout_alignParentEnd="true"/>
+                android:background="@drawable/newshape"
+                android:id="@+id/button"/>
     </LinearLayout>
-    <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listViewAtomlistview" android:layout_below="@+id/searchField" android:layout_centerHorizontal="true"
-            />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom">
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:alpha="0.30"
+                    android:text="Search"
+                    android:textSize="19dp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/search"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginBottom="13dp"
+                    android:text="Molarity"
+                    android:alpha="0.95"
+                    android:textColor="@color/darkgray"
+                    android:textSize="19dp"
+                    android:id="@+id/molarity"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginRight="13dp"
+                    android:text="EN"
+                    android:alpha="0.95"
+                    android:textColor="@color/darkgray"
+                    android:textSize="19dp"
+                    android:id="@+id/EN"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

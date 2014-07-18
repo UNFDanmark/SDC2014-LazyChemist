@@ -28,7 +28,6 @@ public class Electronegativity extends Activity {
         ENText1.setHint("1. Atom");
         ENText2.setHint("2. Atom");
         //atomlib
-       ListView listView = (ListView) findViewById(R.id.listViewAtomlistview);
 
         AtomLibrary atomLibrary = new AtomLibrary();
         atomLibrary.read(getAssets());
@@ -36,7 +35,7 @@ public class Electronegativity extends Activity {
         final ArrayList<Atom> atomList = atomLibrary.getAtoms();
 
         AtomAdapter atomAdapter = new AtomAdapter(atomList, getApplicationContext());
-        listView.setAdapter(atomAdapter);
+        // listView.setAdapter(atomAdapter);
         //atomlib end
 
         ENText1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
