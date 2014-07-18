@@ -10,7 +10,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class ChemistMain extends Activity {
-
+/*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +74,6 @@ public class ChemistMain extends Activity {
                 }
             }
         });
-    }
+    }*/
 }
 

@@ -76,16 +76,60 @@ public class Electronegativity extends Activity {
                         calculate.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                double EN1 = Double.parseDouble(ENText1.getText().toString());
-                                double EN2 = Double.parseDouble(ENText2.getText().toString());
-                               if (atomList.contains(EN1) || atomList.contains(EN2));
+                                String A1 = "";
+                                String A2 = "";
+                                double B1 = 0;
+                                double B2 = 0;
+                                try{
+                                    B1 = Double.parseDouble(ENText1.getText().toString());
+
+                                }catch (Exception e){
+                                    A1 = ENText1.getText().toString();
+                                }
+
+
+                                try{
+                                    B2 = Double.parseDouble(ENText2.getText().toString());
+
+                                }catch (Exception e){
+                                    A2 = ENText2.getText().toString();
+                                }
+
+                                Atom atom1 = null;
+                                Atom atom2 = null;
+                                //if(atomList.contains(EN1) || atomList.contains(EN2)) {}
+                                for(Atom a : atomList){
+                                    if(a.symbol.toString().replace(" ", "").equalsIgnoreCase(A1)){
+                                        atom1 = a;
+                                    }
+                                    if(a.symbol.toString().replace(" ", "").equalsIgnoreCase(A2)){
+                                        atom2 = a;
+                                    }
+                                }
+                                System.out.println(atom1 + " og " +
+                                        "" + atom2);
+                                double EN1 = 0, EN2 = 0;
+                                //atom.getElectroNegativity();
+                                if(atom1 != null){
+                                    EN1 = atom1.getElectroNegativity();
+                                }
+                                else {
+                                    EN1 = B1;
+                                }
+                                if(atom2 != null){
+                                    EN2 = atom2.getElectroNegativity();
+                                } else {
+                                    EN2 = B2;
+                                }
+
+
 
                                 String answer;
                                 String type;
                                 if (EN1 < 0 || EN2 < 0) {
                                     answer = "ERROR: The EN for one or more atoms are unknown";
                                 } else if (EN1 > EN2) {
-                                    answer = EN1 - EN2 + "";
+                                    answer = (double)(EN1 - EN2) + "";
                                     if (Double.parseDouble(answer) < 0.5) {
                                         type = "Nonpolar covalent";
                                     } else if (Double.parseDouble(answer) < 1.6) {
