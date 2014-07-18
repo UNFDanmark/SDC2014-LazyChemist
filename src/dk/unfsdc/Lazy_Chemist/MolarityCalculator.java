@@ -543,6 +543,7 @@ public class MolarityCalculator extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ChemistMain.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(i);
             }
         });
@@ -551,6 +552,7 @@ public class MolarityCalculator extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Electronegativity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(i);
             }
         });

@@ -264,7 +264,7 @@ public class AtomLibrary {
             POLONIUM,
             ASTATINE,
             FRANCIUM,
-            RADIUM,
+            RADIUM
     };
 }
 

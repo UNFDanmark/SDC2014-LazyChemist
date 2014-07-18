@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:weightSum="1">
         <EditText
-                android:layout_width="230dp"
+                android:layout_width="246dp"
                 android:layout_height="42dp"
                 android:ems="10"
                 android:inputType="textNoSuggestions"
@@ -24,7 +24,7 @@
         <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Calculate"
+                android:text="Search"
                 android:background="@drawable/newshape"
                 android:textColor="@color/gray"
                 android:textStyle="bold"
@@ -32,8 +32,48 @@
                 android:layout_marginTop="13dp"
                 android:height="42dp"
                 android:textSize="19dp"
-                android:id="@+id/button"/>
+                android:id="@+id/buttons"/>
     </LinearLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="13dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/Navn"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="13dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/Forkortelse"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="13dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/Vaegt"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="13dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/Elektronegativitet"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="13dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/Kategori"/>
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
