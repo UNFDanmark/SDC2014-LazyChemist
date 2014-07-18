@@ -531,7 +531,7 @@ public class MolarityCalculator extends Activity {
                 } else if (MOLARITY != 0) {
                     MOLARITY = (double) Math.round(MOLARITY * amountOfDecimals) / amountOfDecimals; // fjernelse af decimaler
                     molarity.setText((MOLARITY * MOLARITY_UNIT_VALUES[MOLARITY_UNIT]) +
-                            " " + UnitPrefixLibrary.UNIT_PREFIXES[MOLARITY_UNIT_PREFIX] + MOLARITY_UNITS[MOLARITY_UNIT]);
+                            " " + UnitPrefixLibrary.UNIT_PREFIXES[MOLARITY_UNIT_PREFIX] + MOLARITY_SHORT_UNITS[MOLARITY_UNIT]);
                 }
             }
         });

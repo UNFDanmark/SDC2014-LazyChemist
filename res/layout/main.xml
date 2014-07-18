@@ -22,13 +22,17 @@
                 android:textColor="@color/darkgray"
                 android:background="@color/white"/>
         <Button
-                android:layout_width="fill_parent"
-                android:layout_height="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:background="@drawable/newshape"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
                 android:layout_marginRight="13dp"
                 android:layout_marginTop="13dp"
-                android:text="Search"
-                android:background="@drawable/newshape"
-                android:id="@+id/buttons"/>
+                android:height="42dp"
+                android:textSize="19dp"
+                android:id="@+id/button"/>
     </LinearLayout>
     <RelativeLayout
             android:layout_width="match_parent"

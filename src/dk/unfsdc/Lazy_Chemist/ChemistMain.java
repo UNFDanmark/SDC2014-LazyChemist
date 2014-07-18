@@ -22,9 +22,10 @@ public class ChemistMain extends Activity {
 
         AtomAdapter atomAdapter = new AtomAdapter(atomList, getApplicationContext());
 
-        Button searchs = (Button) findViewById(R.id.buttons);
-        Button molar = (Button) findViewById(R.id.molar);
-        Button ENs = (Button) findViewById(R.id.ENs);
+        final Button searchs = (Button) findViewById(R.id.buttons);
+        final Button molar = (Button) findViewById(R.id.molar);
+        final Button ENs = (Button) findViewById(R.id.ENs);
+        final EditText search = (EditText) findViewById(R.id.editText2);
 
         molar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +40,14 @@ public class ChemistMain extends Activity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Electronegativity.class);
                 startActivity(i);
+            }
+        });
+
+        searchs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
             }
         });
     }
