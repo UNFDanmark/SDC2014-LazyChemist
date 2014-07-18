@@ -3,7 +3,10 @@
 <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:gravity="fill_vertical">
+        android:orientation="vertical"
+        android:focusable="false"
+        android:background="@color/gray" android:weightSum="1">
+        android:gravity="fill_vertical">
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -14,28 +17,56 @@
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="0.4">
+            android:layout_height="match_parent"
+
+            android:layout_weight="0.4">
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/ENText1" android:layout_weight="1" android:text="1. Atom"/>
+                android:id="@+id/ENText1" android:layout_weight="1"
+                android:textColor="@color/darkgray"
+                android:background="@color/white"/>
+                android:text="1. Atom"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2" android:text="     "/>
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/ENText2" android:layout_alignParentStart="true"
-                android:layout_weight="1" android:text="2. Atom"/>
+                android:layout_weight="1"
+                android:textColor="@color/darkgray"
+                android:background="@color/white"/>
+                android:text="2. Atom"/>
         <Button
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Calculate"
-                android:id="@+id/ENCalculate"/>
+                android:background="@drawable/shape"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:height="10dp"
+                android:textSize="19dp"
+                android:id="@+id/button"/>
+
     </LinearLayout>
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/ENTextViewSvar" android:layout_marginTop="30dp"/>
+            android:id="@+id/ENTextViewSvar"
+            android:focusable="false"
+            android:background="@color/gray" android:weightSum="1">
+            android:layout_marginTop="30dp"/>
     <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
               android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/ENTextViewType"
+              android:focusable="false"
+              android:background="@color/gray" android:weightSum="1">
               android:layout_marginTop="10dp"/>
+
 </LinearLayout>
